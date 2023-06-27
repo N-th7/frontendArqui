@@ -58,6 +58,7 @@ function Registro() {
   return (
     <div>
         <Navbar/>
+    <div className='d-flex justify-content-center align-items-center bg-dark vh-100'>
         <div className="form" action="" onSubmit={handleSubmit}>
         <h1 className="titulo">Registro Movimiento</h1>
         <form className="formu" method="post">       
@@ -87,6 +88,7 @@ function Registro() {
           </div>
         </form>
       </div>
+    </div>
     </div>
   )
 }

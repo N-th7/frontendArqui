@@ -2,7 +2,9 @@
     color: rgb(255, 255, 255);
     text-align: center;
 }
-
+.cambio{
+    background-color: #1E2126 !important;
+}
 .form{
     background-color:#16191c;
     height: 600px;

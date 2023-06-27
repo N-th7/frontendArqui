@@ -31,7 +31,7 @@ function Reporte(props) {
   return (
     <div>
         <Navbar></Navbar>
-            <div>
+            <div  className='d-flex justify-content-center align-items-center bg-dark vh-100'>
                 <h2 className="tituloInicio">Reporte total</h2>
                 <div className="listaInEg">
                     <ul className="ul">
