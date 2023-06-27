@@ -6,13 +6,12 @@ import { useLocation,useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function Reporte() {
-    const [dat,setDat]=useState([[]])
+    const [dat,setData]=useState([]);
     const navigation=useNavigate();
     const location = useLocation();
     const [id,setid]=useState(0);
     const [nombre,setnombre]=useState("")
     const [correo,setCorreo]=useState("")
-
 
     const [values,setValues]=useState({
         idUsuario:0
@@ -27,28 +26,30 @@ function Reporte() {
            }
            });
       }
-
     useEffect(() => {
         setid(location.state.id);
         setnombre(location.state.nombre)
         setCorreo(location.state.correo);
-
-
         setValues({idUsuario:[id]})
-
-        console.log(correo)
-
-        axios.post('http://localhost:8081/reporte',values)
-        .then(res=> {
-             console.log(res.data.Res)
-             setDat(res.data.Res)
-          })
-          .catch(err=>console.log(err))
         //}
-       
+        var rd=[]
 
-      });
-    
+        async function getMovimientos() {
+            setid(location.state.id);
+            axios.post('http://localhost:8081/reporte',values)
+            .then(res=> {
+             console.log(res.data.Res)
+             setData(res.data.Res)
+              })
+              .catch(err=>console.log(err))
+        }
+
+        getMovimientos();
+        console.log(dat)
+       
+        }, []);
+
+
   return (
     <div>
         <Navbar></Navbar>
@@ -57,9 +58,10 @@ function Reporte() {
                 <div className="listaInEg">
                     <ul className="ul">
                     {
-                    
+                                            
                     dat.map((da) =>( 
-                            <li className=""><p>{da.descripcion}</p> <p className="">{da.monto} Bs</p> <p className="">{da.fecha}</p></li>
+
+                        <li className="" key={da.idMovimiento}><p>{da.descripcion}</p> <p className="">{da.monto} Bs</p> <p className="">{da.fecha}</p></li>
                     ))
                 }
                     </ul>
