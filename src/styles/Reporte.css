@@ -1,0 +1,76 @@
+.tituloInicio{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.ul{
+    background-color: #1E1E1E;
+    padding: 1%;
+}
+.li{
+    list-style: none;
+    background-color: #c684228b;
+    padding: 1.5%;
+    width: 100%;
+    margin-bottom: 1.5%;
+}
+
+.li p{
+    display: inline;
+    font-size: 20px;
+}
+
+.li .monto, .li .fecha{
+    text-align: center;
+    margin-left: 30%;
+}
+
+.listaInEg{
+    width: 50%;
+    float: left;
+}
+
+.ladoDerecho{
+    width: 50%;
+    float: right;
+}
+.ladoDerecho .usuarioInfoCont{
+    background-color: #C68422;
+    width: 70%;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.ladoDerecho .usuarioInfo{
+    padding: 3%;
+    width: fit-content;
+    margin: auto;
+}
+
+.ladoDerecho .usuarioInfo .info{
+    margin: 2%;
+} 
+
+.ladoDerecho .imagen{
+    margin: auto;
+}
+
+.saldoBoton{
+    width: 70%;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+}
+.saldo{
+    font-size: 32px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.registrarMovimiento{
+    width: 100%;
+    background-color: #C68422;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    padding: 2%;
+}

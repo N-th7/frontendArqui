@@ -1,0 +1,60 @@
+.titulo{
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.form{
+    background-color:#16191c;
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.labels{
+    color: rgb(251, 251, 251);
+}
+.titulo{
+    text-align: center;
+    margin-top: 8px;
+} 
+.formu{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 20px;
+}
+.mo{
+    background-color: #1E2126;
+    display: flex;
+    justify-content: center;
+    border: 0;
+    width: 300px;
+    height: 35px;
+    border-radius: 6px;
+    color: white;
+} 
+.boton{
+    background-color: #C68422;
+    color: white;
+    border-radius: 6px;
+    padding: 5px 10px 5px 10px;
+    margin: 10px;
+    border: 0;
+}
+.posicionBoton{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.checks{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    color:white;
+}
+.cajas{
+    margin-left: 25px;
+}
