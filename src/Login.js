@@ -1,8 +1,8 @@
-//import React from 'react'
 import React,{useState} from 'react'
 import {Link,useNavigate} from 'react-router-dom'
 import Validation from './LoginValidation'
 import axios from 'axios'
+import '../src/styles/Login.css'
 
 export function Login() {
   var id=0
@@ -48,24 +48,25 @@ export function Login() {
   return  (
     <div className='d-flex justify-content-center align-items-center bg-dark vh-100'>
         <div className='bg-white p-3 rounded w-25'>
-            <h2>Sing In</h2>
-            <form action="" onSubmit={handleSubmit}>
+            <form className="form" action="" onSubmit={handleSubmit}>
+            <h1 className='tit'>Cash Control</h1>
+              <div className='formu'>
                <div>
-                 <label htmlFor='email'><strong>Email</strong></label>
-                 <input type="email" placeholder='Enter Email' name='email'
-                 onChange={handleInput} className='form-control rounded-0'/>
+                 <label className="labels" htmlFor='email'><strong>Correo Electronico</strong></label>
+                 <input type="email" placeholder=' Ingrese su correo' name='email'
+                 onChange={handleInput} className="inputs"/>
                  {errors.email && <span className='text-danger'>{errors.email}</span>}
                </div>
                <div>
-                 <label htmlFor='password'><strong>Password</strong></label>
-                 <input type="password" placeholder='Enter Password' name='password'
-                 onChange={handleInput} className='form-control rounded-0'/>
+                 <label className="labels" htmlFor='password'><strong>Contraseña</strong></label>
+                 <input className="inputs" type="password" placeholder='Ingrese su contraseña' name='password'
+                 onChange={handleInput} />
                  {errors.password && <span className='text-danger'>{errors.password}</span>}
                </div>
                <br></br>
-               <button type='submit'className='btn btn-success w-100 rounded-0'><strong>Log In</strong></button>
-               <p>You are agree to aour terms</p>
-               <Link to="/signup" className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>Create Account</Link>
+               <button type='submit'className='boton w-100 '><strong>Ingresar</strong></button>
+               <Link to="/signup" className='w-100 tam'><strong>Registrarse</strong></Link>
+               </div>
             </form>
         </div>
     </div>
