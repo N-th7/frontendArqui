@@ -3,12 +3,20 @@ import Navbar from '../../shared/components/Navbar'
 import '../../styles/Reporte.css'
 import { useState, useEffect } from 'react';
 import { useLocation,useNavigate } from 'react-router-dom';
-function Reporte(props) {
+import axios from 'axios';
+
+function Reporte() {
+    const [dat,setDat]=useState([[]])
     const navigation=useNavigate();
     const location = useLocation();
     const [id,setid]=useState(0);
     const [nombre,setnombre]=useState("")
     const [correo,setCorreo]=useState("")
+
+
+    const [values,setValues]=useState({
+        idUsuario:0
+    })
 
     const navigateRegister=(event)=>{
         navigation('/Registro',{
@@ -23,9 +31,22 @@ function Reporte(props) {
     useEffect(() => {
         setid(location.state.id);
         setnombre(location.state.nombre)
-        setCorreo(location.state.correo)
+        setCorreo(location.state.correo);
+
+
+        setValues({idUsuario:[id]})
 
         console.log(correo)
+
+        axios.post('http://localhost:8081/reporte',values)
+        .then(res=> {
+             console.log(res.data.Res)
+             setDat(res.data.Res)
+          })
+          .catch(err=>console.log(err))
+        //}
+       
+
       });
     
   return (
@@ -35,6 +56,12 @@ function Reporte(props) {
                 <h2 className="tituloInicio">Reporte total</h2>
                 <div className="listaInEg">
                     <ul className="ul">
+                    {
+                    
+                    dat.map((da) =>( 
+                            <li className=""><p>{da.descripcion}</p> <p className="">{da.monto} Bs</p> <p className="">{da.fecha}</p></li>
+                    ))
+                }
                     </ul>
                 </div>
                 <div className="ladoDerecho">

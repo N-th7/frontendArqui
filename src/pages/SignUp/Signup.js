@@ -8,8 +8,7 @@ function Signup() {
   const[values,setvalues]= useState({
     name:'',
     email:'',
-    password:'',
-
+    password:''
   })
   const navigate =useNavigate();
   const[errors,setErrors]=useState({})
