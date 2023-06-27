@@ -3,6 +3,7 @@ import Navbar from '../../shared/components/Navbar'
 import '../../styles/Reporte.css'
 import { useState, useEffect } from 'react';
 import { useLocation,useNavigate } from 'react-router-dom';
+
 function Reporte(props) {
     const navigation=useNavigate();
     const location = useLocation();
@@ -31,11 +32,21 @@ function Reporte(props) {
   return (
     <div>
         <Navbar></Navbar>
-            <div  className='d-flex justify-content-center align-items-center bg-dark vh-100'>
-                <h2 className="tituloInicio">Reporte total</h2>
+            <div  className='bg-dark vh-100'>
+                <div className="tituloInicio">
+                    <h1>Reporte de Gastos</h1>
+                </div>
                 <div className="listaInEg">
-                    <ul className="ul">
-                    </ul>
+                <table className="table table-bordered table-hover mt-3">
+            <thead >
+              <tr>
+                <th scope="col">{id}</th>
+                <th scope="col">Monto</th>
+                <th scope="col">Fecha</th>
+              </tr>
+            </thead>  
+
+          </table>
                 </div>
                 <div className="ladoDerecho">
                     <div className="usuarioInfoCont">
@@ -48,7 +59,8 @@ function Reporte(props) {
 
                     <div className="saldoBoton">
                         <p className="saldo">Saldo: 450 Bs</p>
-                        <button className="registrarMovimiento" onClick={navigateRegister}>Registrar movimiento</button>
+                        <button className="registrarMovimiento" onClick={navigateRegister}><strong>Registrar movimiento</strong></button>
+                        <button className="registrarMovimiento" ><strong>Imprimir</strong></button>
                     </div>
                 </div>
             </div>

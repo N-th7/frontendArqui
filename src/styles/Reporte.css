@@ -1,10 +1,13 @@
 .tituloInicio{
-    margin-top: 2%;
-    margin-bottom: 2%;
+    text-align: center;
+    color: white;
+    padding: 10px;
 }
+
 .ul{
     background-color: #1E1E1E;
     padding: 1%;
+    color: white;
 }
 .li{
     list-style: none;
@@ -27,6 +30,7 @@
 .listaInEg{
     width: 50%;
     float: left;
+    margin-left: 30px;
 }
 
 .ladoDerecho{
@@ -34,10 +38,11 @@
     float: right;
 }
 .ladoDerecho .usuarioInfoCont{
-    background-color: #C68422;
+    background-color: #f4f4f4;
     width: 70%;
     margin: auto;
     border-radius: 5px;
+    text-align: center;
 }
 
 .ladoDerecho .usuarioInfo{
@@ -64,9 +69,11 @@
     font-size: 32px;
     margin-bottom: 5%;
     margin-top: 5%;
+    color: white;
 }
 
 .registrarMovimiento{
+    margin: 5px;
     width: 100%;
     background-color: #C68422;
     color: white;
