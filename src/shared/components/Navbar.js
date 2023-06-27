@@ -6,7 +6,7 @@ function Navbar() {
 <nav className="navbar"> 
   <div className="container">
     <a className="nav" >Cash Control</a>
-    <a className='bot' href='/'>Log Out</a>
+    <a className='bot no-print' href='/'>Log Out</a>
   </div>
 </nav>
   )

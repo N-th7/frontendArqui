@@ -81,3 +81,9 @@
     border-radius: 5px;
     padding: 2%;
 }
+@media print {
+    .no-print,
+    .no-print > * {
+      display: none;
+    }
+}

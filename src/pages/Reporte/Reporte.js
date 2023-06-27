@@ -21,6 +21,10 @@ function Reporte(props) {
            });
       }
 
+      const onPrint = () => {
+        window.print()
+      }
+
     useEffect(() => {
         setid(location.state.id);
         setnombre(location.state.nombre)
@@ -34,13 +38,13 @@ function Reporte(props) {
         <Navbar></Navbar>
             <div  className='bg-dark vh-100'>
                 <div className="tituloInicio">
-                    <h1>Reporte de Gastos</h1>
+                    <h1 >Reporte de Gastos</h1>
                 </div>
                 <div className="listaInEg">
                 <table className="table table-bordered table-hover mt-3">
             <thead >
               <tr>
-                <th scope="col">{id}</th>
+                <th scope="col">Tipo</th>
                 <th scope="col">Monto</th>
                 <th scope="col">Fecha</th>
               </tr>
@@ -48,7 +52,7 @@ function Reporte(props) {
 
           </table>
                 </div>
-                <div className="ladoDerecho">
+                <div className="ladoDerecho no-print">
                     <div className="usuarioInfoCont">
                         
                         <div className="usuarioInfo">
@@ -60,7 +64,7 @@ function Reporte(props) {
                     <div className="saldoBoton">
                         <p className="saldo">Saldo: 450 Bs</p>
                         <button className="registrarMovimiento" onClick={navigateRegister}><strong>Registrar movimiento</strong></button>
-                        <button className="registrarMovimiento" ><strong>Imprimir</strong></button>
+                        <button className="registrarMovimiento" onClick={onPrint}><strong>Imprimir</strong></button>
                     </div>
                 </div>
             </div>
