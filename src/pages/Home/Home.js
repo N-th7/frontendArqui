@@ -14,7 +14,7 @@ function Home(props) {
       console.log(res)
       if(res.data.valid){
          setName(res.data.idUsuario)
-      }else{
+      }else{ 
         navigate('/login') 
       }
     })

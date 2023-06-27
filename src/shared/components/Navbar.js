@@ -12,9 +12,6 @@ function Navbar() {
     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0"> 
         <li className="nav-item">
-          <a className="nav-link active"  href="Home">Inicio</a>
-        </li>
-        <li className="nav-item">
           <a className="nav-link" href="Reporte">Reporte</a>
         </li>
         <li className="nav-item"> 
