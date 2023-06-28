@@ -13,6 +13,16 @@ function Registro() {
     useEffect(() => {
       setid(location.state.id);
     });
+
+    const navigateReporte=(event)=>{
+      navigation('/reporte',{
+          state:{ 
+           id: location.state.id,
+           nombre: location.state.nombre,
+           correo: location.state.correo
+         }
+         });
+    }
       
 
   const[values,setvalues]= useState({
@@ -54,6 +64,10 @@ function Registro() {
     //}
   } 
 
+  function handleClick(myRadio) {
+    values.tipo=myRadio
+}
+
 
   return (
     <div>
@@ -75,17 +89,17 @@ function Registro() {
           <label className='labels'>Descuento</label><br></br>
           <input className="mo" id='descuento' type="text" name='descuento' onChange={handleInput}/><br></br>
 
-        <div className="checks">
-          <input type="checkbox" id="cbox2" value="second_checkbox"></input>
-          <label>Ingreso</label>
-          <input className="cajas" type="checkbox" id="cbox2" value="second_checkbox"></input>
-          <label>Gasto</label>
-        </div>
+              <div className="checks">
+                
+                <label><input type="radio" id="cbox2" value="Ingreso" name='movimiento'  onClick={()=>handleClick("Ingreso")}/>Ingreso</label>
+                
+                <label><input type="radio" className="cajas"  id="cbox2" value="Gasto" name='movimiento' onClick={()=>handleClick("Gasto")}/>Gasto</label>
+              </div>
           
-          <div className="posicionBoton">
-          <button className="boton" type="" >Cancelar</button><br></br>
-          <button className="boton" type="submit">Registrar</button><br></br>
-          </div>
+              <div className="posicionBoton">
+                  <button className="boton" type='button' onClick={navigateReporte} >Cancelar</button><br></br>
+                  <button className="boton" type="submit">Registrar</button><br></br>
+              </div>
         </form>
       </div>
     </div>
