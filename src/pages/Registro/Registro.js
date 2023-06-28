@@ -25,14 +25,7 @@ function Registro() {
     idUsuario:0
   })
 
-  [{
-    "id":"1",
-    "status":true
-  },
-  { "id":"2",
-    "status":"false"
-  }
-]
+
 
   const[errors,setErrors]=useState({})
 
@@ -58,7 +51,9 @@ function Registro() {
          console.log(res)
       })
       .catch(err=>console.log(err))
+    //}
   } 
+
 
   return (
     <div>
@@ -81,9 +76,9 @@ function Registro() {
           <input className="mo" id='descuento' type="text" name='descuento' onChange={handleInput}/><br></br>
 
         <div className="checks">
-          <input type="checkbox" id="cbox2" value="1"></input>
+          <input type="checkbox" id="cbox2" value="second_checkbox"></input>
           <label>Ingreso</label>
-          <input className="cajas" type="checkbox" id="cbox2" value="2"></input>
+          <input className="cajas" type="checkbox" id="cbox2" value="second_checkbox"></input>
           <label>Gasto</label>
         </div>
           
