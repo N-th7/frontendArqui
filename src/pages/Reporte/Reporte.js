@@ -85,6 +85,8 @@ function Reporte(props) {
                 <th scope="col">Tipo</th>
                 <th scope="col">Descripcion</th>
                 <th scope="col">Monto</th>
+                <th scope="col">Porcentaje</th>
+                <th scope="col">Descuento</th>
                 <th scope="col">Fecha</th>
                 <th scope="col">  </th>
                 
@@ -94,7 +96,9 @@ function Reporte(props) {
                   <tr id={da.idMovimiento} >
                     <td scope="col">{da.tipo}</td>
                     <td scope="col">{da.descripcion}</td>
-                    <td scope="col" >{da.monto}</td>
+                    <td scope="col" >{da.monto} Bs</td>
+                    <td scope="col" >{da.descuento} %</td>
+                    <td scope="col" >{da.monto-(da.monto*da.descuento/100)} Bs</td>
                     <td scope="col">{da.fecha}</td>
                     <td id={da.idMovimiento} ><button className='editBorrar' key={da.idMovimiento} id={da.idMovimiento} onClick={() => DeleteItems(index)}><img src={basurero} width={30} ></img></button>
 
