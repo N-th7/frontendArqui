@@ -3,21 +3,26 @@ import {Link,useNavigate} from 'react-router-dom'
 import Validation from './LoginValidation'
 import axios from 'axios'
 import '../src/styles/Login.css'
+import {sha256,sha224} from 'js-sha256'
 
 export function Login() {
   var id=0
   var nombre=""
   var correo=""
+
   const[values,setvalues]= useState({
     email:'',
     password:'',
-
   })
+
+
  const navigation=useNavigate();
   const[errors,setErrors]=useState({})
+  
   const handleInput=(event)=>{
     setvalues(prev =>({...prev,[event.target.name]:[event.target.value]}))
   }
+
   axios.defaults.withCredentials=true;
   const handleSubmit=async(event)=>{
     event.preventDefault();

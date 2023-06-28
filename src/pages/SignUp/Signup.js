@@ -4,6 +4,8 @@ import Validation from './SignupValidation'
 import axios from 'axios'
 import '../../styles/SignUp.css'
 
+
+
 function Signup() {
 
   const[values,setvalues]= useState({
@@ -12,12 +14,15 @@ function Signup() {
     password:'',
 
   })
+
+   
   const navigate =useNavigate();
   const[errors,setErrors]=useState({})
 
   const handleInput=(event)=>{
     setvalues(prev =>({...prev,[event.target.name]:[event.target.value]}))
   }
+  
 
   const handleSubmit=async(event)=>{
     event.preventDefault();
