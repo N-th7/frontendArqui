@@ -28,18 +28,18 @@
 }
 
 .listaInEg{
-    width: 45%;
+    width: 55%;
     float: left;
     margin-left: 30px;
 }
 
 .ladoDerecho{
-    width: 50%;
+    width: 40%;
     float: right;
 }
 .ladoDerecho .usuarioInfoCont{
     background-color: #f4f4f4;
-    width: 70%;
+    width: 80%;
     margin: auto;
     border-radius: 5px;
     text-align: center;

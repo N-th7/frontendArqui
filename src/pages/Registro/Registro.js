@@ -86,7 +86,7 @@ function Registro() {
           <label className='labels'>Fecha</label><br></br>
           <input className="mo" id='fecha' type="date" name='fecha' onChange={handleInput}/><br></br>
 
-          <label className='labels'>Descuento</label><br></br>
+          <label className='labels'>Porcentaje de descuento</label><br></br>
           <input className="mo" id='descuento' type="text" name='descuento' onChange={handleInput}/><br></br>
 
               <div className="checks">
